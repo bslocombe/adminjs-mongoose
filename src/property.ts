@@ -40,6 +40,9 @@ class Property extends BaseProperty {
     instanceToType(mongooseInstance) {
       switch (mongooseInstance) {
       case 'String':
+        if (this.reference()) {
+          return 'reference'
+        }
         return 'string'
       case 'Boolean':
         return 'boolean'
