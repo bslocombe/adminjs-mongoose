@@ -88,7 +88,7 @@ class Property extends BaseProperty {
     }
 
     isId() {
-      return this.name() === ID_PROPERTY
+      return this.name() === ID_PROPERTY && !this.reference()
     }
 
     availableValues() {
