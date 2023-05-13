@@ -70,7 +70,7 @@ class Property extends BaseProperty {
     }
 
     isEditable() {
-      return this.name() !== VERSION_KEY_PROPERTY && this.name() !== ID_PROPERTY
+      return this.name() !== VERSION_KEY_PROPERTY && this.name() !== ID_PROPERTY || this.reference()
     }
 
     reference() {
